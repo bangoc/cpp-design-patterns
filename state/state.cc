@@ -1,5 +1,6 @@
 #include "state.h"
 
+#include <cstdlib>
 #include <iostream>
 
 #include "gumballs_machine.h"
@@ -21,5 +22,13 @@ void State::SetNoCoinState() {
 }
 
 void State::SetHasCoinState() {
-  model_->state_ = &(model_->has_coin_);
+  if ((std::rand() % 10) == 0) {
+    SetWinnerState();
+  } else {
+    model_->state_ = &(model_->has_coin_);
+  }
+}
+
+void State::SetWinnerState() {
+  model_->state_ = &(model_->winner_);
 }

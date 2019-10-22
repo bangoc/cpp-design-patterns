@@ -7,6 +7,7 @@ HasCoinState::HasCoinState(GumballsMachine* machine): State{machine} {
 
 void HasCoinState::TurnCrank() {
   TryDispenseOneGumball();
+  SetNoCoinState();
 }
 
 void HasCoinState::InsertCoin() {

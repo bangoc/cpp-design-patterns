@@ -2,7 +2,7 @@
 #include <iostream>
 
 GumballsMachine::GumballsMachine()
-    : no_coin_{this}, has_coin_{this}, state_{&no_coin_} {
+    : no_coin_{this}, has_coin_{this}, winner_{this}, state_{&no_coin_} {
 
 }
 

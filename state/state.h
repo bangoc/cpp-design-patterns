@@ -13,6 +13,7 @@ class State {
   void TryDispenseOneGumball();
   void SetNoCoinState();
   void SetHasCoinState();
+  void SetWinnerState();
  public:
   virtual void TurnCrank() = 0;
   virtual void EjectCoin() = 0;
